@@ -1,0 +1,636 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #0D1E31, #111);
+    overflow: hidden;
+  }
+  
+  .night{
+    position: absolute;/* position: relative; */
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(40deg);
+  }
+  
+  .star{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 4px;
+    background: linear-gradient(-45deg, #df52ff, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #699BFF);
+    animation: tail 3s ease-in-out infinite,
+               falling 3s ease-in-out infinite;
+  }
+  
+  @keyframes tail{
+    0%{
+      width: 0;
+    }
+    30%{
+      width: 100px;
+    }
+    100%{
+      width: 0;
+    }
+  }
+  
+  @keyframes falling{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(300px);
+    }
+  }
+  
+  .star::before, .star::after{
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #e657ff, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3s ease-in-out infinite;
+  }
+  
+  @keyframes shining{
+    0%{
+      width: 0;
+    }
+    50%{
+      width: 30px;
+    }
+    100%{
+      width: 0;
+    }
+  }
+  
+  .star::after{
+    transform: translateX(50%) rotateZ(-45deg);
+  }
+  
+  .star:nth-child(1){
+    top: calc(50% - -200px);
+    left: calc(50% - 900px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(1)::before, .star:nth-child(1)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(2){
+    top: calc(50% - 150px);
+    left: calc(50% - 400px);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(2)::before, .star:nth-child(2)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(3){
+    top: calc(50% - 450px);
+    left: calc(50% - -250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(3)::before, .star:nth-child(3)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(4){
+    top: calc(50% - -250px);
+    left: calc(50% - 350px);
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(4)::before, .star:nth-child(4)::after{
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(5){
+    top: calc(50% - 250px);
+    left: calc(50% - 600px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(5)::before, .star:nth-child(5)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(6){
+    top: calc(50% - 50px);
+    left: calc(50% - -250px);
+    animation-delay: 2.3s;
+  }
+  
+  .star:nth-child(6)::before, .star:nth-child(6)::after{
+    animation-delay: 2.3s;
+  }
+
+  .star:nth-child(7){
+    top: calc(50% - -500px);
+    left: calc(50% - 450px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(7)::before, .star:nth-child(7)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(8){
+    top: calc(50% - 800px);
+    left: calc(50% - 900px);
+    animation-delay: 1.5s;
+  }
+  
+  .star:nth-child(8)::before, .star:nth-child(8)::after{
+    animation-delay: 1.5s;
+  }
+  
+  .star:nth-child(9){
+    top: calc(50% - 1150px);
+    left: calc(50% - 400px);
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(9)::before, .star:nth-child(9)::after{
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(10){
+    top: calc(50% - 1450px);
+    left: calc(50% - -250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(10)::before, .star:nth-child(10)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(11){
+    top: calc(50% - 750px);
+    left: calc(50% - 350px);
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(11)::before, .star:nth-child(11)::after{
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(12){
+    top: calc(50% - 250px);
+    left: calc(50% - 600px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(12)::before, .star:nth-child(12)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(13){
+    top: calc(50% - 1050px);
+    left: calc(50% - -250px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(13)::before, .star:nth-child(13)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(14){
+    top: calc(50% - 500px);
+    left: calc(50% - 450px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(14)::before, .star:nth-child(14)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(15){
+    top: calc(50% - -1200px);
+    left: calc(50% - 900px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(15)::before, .star:nth-child(15)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(16){
+    top: calc(50% - -850px);
+    left: calc(50% - 400px);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(16)::before, .star:nth-child(16)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(17){
+    top: calc(50% - -550px);
+    left: calc(50% - -250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(17)::before, .star:nth-child(17)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(18){
+    top: calc(50% - -1250px);
+    left: calc(50% - 350px);
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(18)::before, .star:nth-child(18)::after{
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(19){
+    top: calc(50% - -750px);
+    left: calc(50% - 600px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(19)::before, .star:nth-child(19)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(20){
+    top: calc(50% - -1050px);
+    left: calc(50% - -250px);
+    animation-delay: 1.7s;
+  }
+  
+  .star:nth-child(20)::before, .star:nth-child(20)::after{
+    animation-delay: 1.7s;
+  }
+
+  .star:nth-child(21){
+    top: calc(50% - -1500px);
+    left: calc(50% - 450px);
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(21)::before, .star:nth-child(21)::after{
+    animation-delay: 1.2s;
+  }
+  .star:nth-child(22){
+    top: calc(50% - -2200px);
+    left: calc(50% - 900px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(22)::before, .star:nth-child(22)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(23){
+    top: calc(50% - -1850px);
+    left: calc(50% - 400px);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(23)::before, .star:nth-child(23)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(24){
+    top: calc(50% - -1550px);
+    left: calc(50% - -250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(24)::before, .star:nth-child(24)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(25){
+    top: calc(50% - -2250px);
+    left: calc(50% - 350px);
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(25)::before, .star:nth-child(25)::after{
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(26){
+    top: calc(50% - 2350px);
+    left: calc(50% - 600px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(26)::before, .star:nth-child(26)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(27){
+    top: calc(50% - 2020px);
+    left: calc(50% - -250px);
+    animation-delay: 1.7s;
+  }
+  
+  .star:nth-child(27)::before, .star:nth-child(27)::after{
+    animation-delay: 1.7s;
+  }
+
+  .star:nth-child(28){
+    top: calc(50% - -2500px);
+    left: calc(50% - 450px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(28)::before, .star:nth-child(28)::after{
+    animation-delay: 2.2s;
+  }
+
+/*left*/
+
+.star:nth-child(29){
+    top: calc(50% - -200px);
+    left: calc(50% - -100px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(29)::before, .star:nth-child(29)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(30){
+    top: calc(50% - 150px);
+    left: calc(50% - -600px);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(30)::before, .star:nth-child(30)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(31){
+    top: calc(50% - 450px);
+    left: calc(50% - -1250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(31)::before, .star:nth-child(31)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(32){
+    top: calc(50% - -250px);
+    left: calc(50% - -650px);
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(32)::before, .star:nth-child(4)::after{
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(33){
+    top: calc(50% - 250px);
+    left: calc(50% - -1600px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(33)::before, .star:nth-child(33)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(34){
+    top: calc(50% - 50px);
+    left: calc(50% - -1250px);
+    animation-delay: 2.3s;
+  }
+  
+  .star:nth-child(34)::before, .star:nth-child(34)::after{
+    animation-delay: 2.3s;
+  }
+
+  .star:nth-child(35){
+    top: calc(50% - -500px);
+    left: calc(50% - -650px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(35)::before, .star:nth-child(35)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(36){
+    top: calc(50% - 800px);
+    left: calc(50% - -100px);
+    animation-delay: 1.5s;
+  }
+  
+  .star:nth-child(36)::before, .star:nth-child(36)::after{
+    animation-delay: 1.5s;
+  }
+  
+  .star:nth-child(37){
+    top: calc(50% - 1150px);
+    left: calc(50% - -600px);
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(37)::before, .star:nth-child(37)::after{
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(38){
+    top: calc(50% - 1450px);
+    left: calc(50% - -1250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(38)::before, .star:nth-child(38)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(39){
+    top: calc(50% - 750px);
+    left: calc(50% - -650px);
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(39)::before, .star:nth-child(39)::after{
+    animation-delay: 3s;
+  }
+  
+  .star:nth-child(40){
+    top: calc(50% - 250px);
+    left: calc(50% - -400px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(40)::before, .star:nth-child(40)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(41){
+    top: calc(50% - 1050px);
+    left: calc(50% - -1250px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(41)::before, .star:nth-child(41)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(42){
+    top: calc(50% - 550px);
+    left: calc(50% - -550px);
+    animation-delay: 2s;
+  }
+  
+  .star:nth-child(42)::before, .star:nth-child(42)::after{
+    animation-delay: 2s;
+  }
+
+  .star:nth-child(43){
+    top: calc(50% - -1200px);
+    left: calc(50% - -100px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(43)::before, .star:nth-child(43)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(44){
+    top: calc(50% - -850px);
+    left: calc(50% - -600px);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(44)::before, .star:nth-child(44)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(45){
+    top: calc(50% - 550px);
+    left: calc(50% - -2250px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(45)::before, .star:nth-child(45)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(46){
+    top: calc(50% - -1250px);
+    left: calc(50% - -350px);
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(46)::before, .star:nth-child(46)::after{
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(47){
+    top: calc(50% - -750px);
+    left: calc(50% - -400px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(47)::before, .star:nth-child(47)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(48){
+    top: calc(50% - -1050px);
+    left: calc(50% - -1250px);
+    animation-delay: 1.7s;
+  }
+  
+  .star:nth-child(48)::before, .star:nth-child(48)::after{
+    animation-delay: 1.7s;
+  }
+
+  .star:nth-child(49){
+    top: calc(50% - -1500px);
+    left: calc(50% - -550px);
+    animation-delay: 1.2s;
+  }
+  
+  .star:nth-child(49)::before, .star:nth-child(49)::after{
+    animation-delay: 1.2s;
+  }
+  .star:nth-child(50){
+    top: calc(50% - -2200px);
+    left: calc(50% - -100px);
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(50)::before, .star:nth-child(50)::after{
+    animation-delay: 0s;
+  }
+  
+  .star:nth-child(51){
+    top: calc(50% - -400px);
+    left: calc(50% - -2000);
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(51)::before, .star:nth-child(51)::after{
+    animation-delay: 0.5s;
+  }
+  
+  .star:nth-child(55){
+    top: calc(50% - -800px);
+    left: calc(50% - 1750px);
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(55)::before, .star:nth-child(55)::after{
+    animation-delay: 1.4s;
+  }
+  
+  .star:nth-child(56){
+    top: calc(50% - -850px);
+    left: calc(50% - 1650px);
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(56)::before, .star:nth-child(56)::after{
+    animation-delay: 0.6s;
+  }
+  
+  .star:nth-child(57){
+    top: calc(50% - -500px);
+    left: calc(50% - 1750px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(57)::before, .star:nth-child(57)::after{
+    animation-delay: 2.2s;
+  }
+
+  .star:nth-child(58){
+    top: calc(50% - -500px);
+    left: calc(50% - 2050px);
+    animation-delay: 1.7s;
+  }
+  
+  .star:nth-child(58)::before, .star:nth-child(58)::after{
+    animation-delay: 1.7s;
+  }
+
+  .star:nth-child(59){
+    top: calc(50% - -2500px);
+    left: calc(50% - -1000px);
+    animation-delay: 2.2s;
+  }
+  
+  .star:nth-child(59)::before, .star:nth-child(59)::after{
+    animation-delay: 2.2s;
+  }
